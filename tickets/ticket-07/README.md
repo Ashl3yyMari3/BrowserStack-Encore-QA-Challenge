@@ -18,4 +18,7 @@ The corrected automation locates the sold-out event through its stable semantic 
 ## Classification
 **Automation Issue**
 
-The final challenge severity and release call are being copied from the submitted ticket record before publication.
+## Final release label
+
+- **Severity:** Major
+- **Call:** Fix it
