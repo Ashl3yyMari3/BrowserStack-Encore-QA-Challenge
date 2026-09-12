@@ -22,4 +22,8 @@ Use Test Companion to explore a complete booking with a large seat selection and
 After **Confirm Payment**, the payment-processing indicator continued spinning indefinitely. The application remained on the Payment screen and never completed the booking.
 
 ## Evidence
-The recovered evidence contains the mobile steps, maximized activity feed, page-source confirmation for all 10 selected seats, and the indefinite payment-spinner state. Image evidence will be added under this folder after final file verification.
+- [Full activity-feed evidence](./evidence/neon-skyline-activity-feed.png)
+- [Payment-spinner session report](./evidence/payment-spinner-session-report.png)
+- [Condensed evidence dashboard](./evidence/payment-spinner-evidence-dashboard.png)
+
+The evidence contains the mobile steps, maximized activity feed, page-source confirmation for all 10 selected seats, and the indefinite payment-spinner state.
