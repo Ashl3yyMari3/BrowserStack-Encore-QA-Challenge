@@ -24,5 +24,7 @@ This is an application business-rule defect. The automated test intentionally fa
 - [WebdriverIO/Appium test](../../automation/save10-discount.spec.js)
 - [Original working-fork commit](https://github.com/Ashl3yyMari3/encore-test-suite/commit/57134c583ea67d2c4989658838f08504c4e87581)
 
-## Final label
-The final challenge severity and release call are being copied from the submitted ticket record before publication.
+## Final release label
+
+- **Severity:** Critical
+- **Call:** Block the release until it’s resolved
