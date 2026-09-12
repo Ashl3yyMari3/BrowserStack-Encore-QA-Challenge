@@ -1,0 +1,1 @@
+# BrowserStack-Encore-QA-Challenge
