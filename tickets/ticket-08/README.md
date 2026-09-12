@@ -17,5 +17,7 @@ even though that seat had never been booked for the second event. Seat inventory
 
 The dashboard confirms the unexpected booked state and preserves the Test Companion finding.
 
-## Final label
-The final challenge severity and release call are being copied from the submitted ticket record before publication.
+## Final release label
+
+- **Severity:** Critical
+- **Call:** Block the release until it’s resolved
