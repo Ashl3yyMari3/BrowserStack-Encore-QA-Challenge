@@ -14,3 +14,8 @@ Run the supplied VipBookingPaymentTest without modifying it, inspect BrowserStac
 
 ## Portfolio status
 The RCA result and final challenge label are being consolidated from the completed run before publication.
+
+## Final release label
+
+- **Severity:** Blocker
+- **Call:** Block the release until it’s resolved
