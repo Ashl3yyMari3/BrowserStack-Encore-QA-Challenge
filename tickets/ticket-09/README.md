@@ -14,3 +14,8 @@ Finding, likely cause, severity, release call, public BrowserStack links for bot
 
 ## Portfolio status
 The precise tablet and phone counts, public links, and final label are being consolidated before publication.
+
+## Final release label
+
+- **Severity:** Critical
+- **Call:** Block the release until it’s resolved
