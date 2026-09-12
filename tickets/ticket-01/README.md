@@ -10,8 +10,11 @@ Attach the Encore PRD to BrowserStack Test Companion, generate full-booking test
 - Severity and release call
 - Exported Test Management CSV
 
-## Portfolio status
-The challenge instructions are preserved. The exported CSV, final finding, and label are being reconciled before publication; no result is being fabricated.
+## Evidence
+
+- [Exported BrowserStack Test Management test cases](./evidence/test_cases_Sept2026HackathonTickets.csv)
+
+The export contains **136 test cases**. Signed attachment URLs were removed before public release because the exported URLs contained temporary access parameters. Test-case IDs, titles, steps, expected results, priorities, tags, project data, and Test Management case URLs were preserved.
 
 ## Final release label
 
