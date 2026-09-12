@@ -12,3 +12,8 @@ Attach the Encore PRD to BrowserStack Test Companion, generate full-booking test
 
 ## Portfolio status
 The challenge instructions are preserved. The exported CSV, final finding, and label are being reconciled before publication; no result is being fabricated.
+
+## Final release label
+
+- **Severity:** Critical
+- **Call:** Block the release until it’s resolved
