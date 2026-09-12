@@ -26,9 +26,9 @@ The challenge required Tickets 1–4 and offered Tickets 5–9 as optional advan
 | [03](./tickets/ticket-03/README.md) | Cross-device event-date validation | Yes | Session evidence being consolidated |
 | [04](./tickets/ticket-04/README.md) | VIP payment failure RCA | Yes | RCA evidence being consolidated |
 | [05](./tickets/ticket-05/README.md) | Seat-selection accessibility | No | Scan evidence being consolidated |
-| [06](./tickets/ticket-06/README.md) | Exploratory 10-seat payment journey | No | Bug and activity-feed evidence recovered |
+| [06](./tickets/ticket-06/README.md) | Exploratory 10-seat payment journey | No | Bug and activity-feed evidence published |
 | [07](./tickets/ticket-07/README.md) | Event-list locator RCA and fix | No | Corrected code published |
-| [08](./tickets/ticket-08/README.md) | Shared-venue seat availability | No | Bug evidence recovered |
+| [08](./tickets/ticket-08/README.md) | Shared-venue seat availability | No | Bug evidence published |
 | [09](./tickets/ticket-09/README.md) | Tablet vs phone seats-remaining behavior | No | Session evidence being consolidated |
 
 ## Confirmed Findings
