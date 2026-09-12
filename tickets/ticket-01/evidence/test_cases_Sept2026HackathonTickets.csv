@@ -1,0 +1,747 @@
+Test Case ID,Title,Folder ID,Folder Path,State,Owner,Priority,Type of Test Case,Automation Status,Description,Preconditions,Template,Steps,Steps: Additional Data,Expected Result,Issues,Tags,Attachments,Created At,Created By,Last Updated At,Last Updated By,Project Name,Test Case URL,AI Prompt
+TC-345,Seat availability remains independent across different events at the same venue,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"`Verify that booking a seat for one event does not make the same seat
+unavailable for a different event hosted at the same venue.`
+
+
+
+","**Preconditions:**
+
+* Encore is launched in a fresh guest session.
+* Two different events exist at the **same venue**.
+* Seat **D1** is initially available for both events.
+* No prior booking in the current session has already reserved D1 for
+  either event.
+
+",Steps,"Open Event A and note the venue.
+
+","Event A name: `NorthBound`Venue: `Birchwood Theatre`
+
+","Event A opens successfully and the venue is displayed.
+
+",,"AI Generated,Cross-Event,Seat Availability,Ticket 1",,09/11/2026 20:06:05,Ashley Cichy,09/11/2026 22:04:09,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136440421,
+,,,,,,,,,,,,"Open Seat Selection for Event A and verify seat **D1** is available.
+
+
+
+","Seat: `D1`
+
+","D1 is available and selectable for Event A.
+
+",,,,,,,,,,
+,,,,,,,,,,,,"Open a different Event B hosted at the **same venue**, then check seat
+D1.
+
+","Event B name: `Glass And Stone`Venue: `Birchwood Theatre`Seat: `D1`
+
+","D1 is available and selectable for Event B before any booking is made.
+
+",,,,,,,,,,
+,,,,,,,,,,,,"Return to Event A, select D1, and complete the booking through payment.
+
+","Seat: `D1`
+
+","Booking completes successfully and D1 is booked for Event A.
+
+",,,,,,,,,,
+,,,,,,,,,,,,"Return to Event B at the same venue and inspect seat D1.
+
+
+
+","Seat: `D1`
+
+","**Expected:** D1 remains available because Event B is a different
+event.**Actual:** D1 is unavailable after D1 was booked for Event A.
+
+",,,,,,,,,,
+TC-343,WELCOME15 eligibility across three consecutive bookings in one session,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates WELCOME15 eligibility across a full three-booking session:
+invalid on booking 1, valid on booking 2, invalid again on booking 3.
+
+","Guest has started a fresh session with no prior bookings.
+
+",Steps,"Complete Booking 1: on the Discount Code step enter 'WELCOME15' ~ Code
+is rejected with an inline error on the first booking
+
+",,,,AI Generated,,09/11/2026 19:23:47,Ashley Cichy,09/11/2026 19:23:47,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424968,
+,,,,,,,,,,,,"Complete Booking 1 without a discount ~ First booking is finalized
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Start Booking 2: on the Discount Code step enter 'WELCOME15' ~ Code is
+accepted; 15% discount is applied to all selected seats
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Complete Booking 2 with the WELCOME15 discount ~ Second booking is
+finalized with 15% discount
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Start Booking 3: on the Discount Code step enter 'WELCOME15' ~ Code is
+rejected with an inline error; it has already been used once
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Complete Booking 3 without a discount ~ Third booking is finalized at
+full price
+
+",,,,,,,,,,,,
+TC-342,Complete end-to-end booking flow with SAVE10 discount on mixed-tier seats,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates the full booking flow applying SAVE10 to a mixed Standard/VIP
+selection, confirming per-seat discount evaluation through to
+confirmation.
+
+","Guest has started a new session. An event with both Standard and VIP
+available seats exists.
+
+",Steps,"Tap 'Continue as Guest' and navigate to an event with Standard and VIP
+seats ~ Event Details screen is displayed
+
+",,,,AI Generated,,09/11/2026 19:23:47,Ashley Cichy,09/11/2026 19:23:47,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424960,
+,,,,,,,,,,,,"Proceed to Seat Selection and select 1 Standard seat and 1 VIP seat ~
+Both seats are selected; prices are visible
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Proceed to the Discount Code step and enter 'SAVE10' ~ Code is accepted;
+Standard seat price is reduced by 10%; VIP seat price is unchanged
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Proceed to the Payment screen ~ Payment screen shows Standard seat at
+discounted price, VIP seat at full price, correct subtotal, discount
+line, and final total
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap confirm payment ~ Booking Confirmation screen shows confirmation
+number, event, both seats, and the final discounted total
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Navigate to My Bookings ~ Booking entry shows correct total (with
+discount applied to Standard seat only)
+
+",,,,,,,,,,,,
+TC-341,"Complete end-to-end guest booking flow — Standard seats, no discount",57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Smoke & Sanity,Not Automated,"Validates the full happy-path booking flow: guest entry → browse → event
+details → seat selection → skip discount → payment → confirmation → My
+Bookings.
+
+","App is freshly launched. At least one event with available Standard
+seats exists.
+
+",Steps,"Launch the app and tap 'Continue as Guest' ~ Event List screen is
+displayed
+
+",,,,AI Generated,,09/11/2026 19:23:46,Ashley Cichy,09/11/2026 19:23:46,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424950,
+,,,,,,,,,,,,"Browse the catalog and tap an available event ~ Event Details screen is
+displayed with full description, venue, date/time, and seating breakdown
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap proceed to seat selection ~ Seat Selection screen is displayed with
+seat map grouped by row
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Select 2 available Standard seats ~ Both seats show as selected
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Proceed to the Discount Code step ~ Discount code field is shown
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Leave the discount code field empty and proceed to payment ~ Payment
+screen is displayed showing both seats and the correct total
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap confirm payment ~ Booking Confirmation screen is displayed
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify confirmation number, event, both seats, and final price are shown
+~ All four fields are present and correct
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Navigate to My Bookings ~ The completed booking appears as the most
+recent entry with event, seats, total price, and confirmation number
+
+",,,,,,,,,,,,
+TC-340,Event dates are relative to today and always appear as upcoming,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,Medium,Functional,Not Automated,"Validates that all events in the catalog display future dates relative
+to the current date, ensuring the catalog always reads as upcoming
+events regardless of when the app is opened.
+
+","Guest is on the Event List screen.
+
+",Steps,"View the event catalog ~ A list of upcoming events is displayed
+
+",,,,AI Generated,,09/11/2026 19:23:46,Ashley Cichy,09/11/2026 19:23:46,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424944,
+,,,,,,,,,,,,"Check the date displayed on multiple event cards ~ All event dates are
+in the future relative to today's date
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify no event shows a past date ~ No event card displays a date that
+has already passed
+
+",,,,,,,,,,,,
+TC-339,Venue seat map is shared across all events at the same venue,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,Medium,Functional,Not Automated,"Validates that two different events hosted at the same venue share the
+same seat map layout (same rows and seat positions), with only
+availability and pricing differing.
+
+","At least two different events are hosted at the same venue. Guest is on
+the Event List screen.
+
+",Steps,"Navigate to Event Details for Event A at Venue X, then proceed to Seat
+Selection ~ Seat map for Event A is displayed; note the row and seat
+layout
+
+",,,,AI Generated,,09/11/2026 19:23:45,Ashley Cichy,09/11/2026 19:23:45,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424936,
+,,,,,,,,,,,,"Go back to the Event List and navigate to Event Details for Event B at
+the same Venue X, then proceed to Seat Selection ~ Seat map for Event B
+is displayed
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Compare the row and seat layout of both maps ~ The seat map layout
+(rows, seat positions) is identical for both events at the same venue
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify that availability and pricing may differ between the two events ~
+Booked seats and prices can differ; only the room shape is shared
+
+",,,,,,,,,,,,
+TC-338,Seat is not held before payment is completed,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that a seat selected by a guest but not yet paid for is not
+held indefinitely — another guest can book it if the first guest does
+not complete payment.
+
+","Two guest sessions are available. An event with limited available seats
+exists.
+
+",Steps,"Guest A selects a seat and navigates to the Discount Code step but does
+not proceed to payment ~ Seat is selected but booking is not finalized
+
+",,,,AI Generated,,09/11/2026 19:23:45,Ashley Cichy,09/11/2026 19:23:45,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424928,
+,,,,,,,,,,,,"Guest B navigates to the same event's Seat Selection screen ~ Seat map
+loads for Guest B
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Guest B selects the same seat that Guest A has selected but not paid for
+~ Guest B is able to select the seat (it is not held for Guest A)
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Guest B completes payment ~ Guest B's booking is finalized with that
+seat
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Guest A attempts to proceed to payment ~ The seat is no longer available
+to Guest A
+
+",,,,,,,,,,,,
+TC-337,Bookings do not persist across sessions,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that bookings from a previous session are not visible in a new
+session, confirming session-based (not persisted) booking behavior.
+
+","Guest has completed at least one booking in a prior session. A new
+session is started (app restarted or session reset).
+
+",Steps,"Complete one or more bookings in Session 1 ~ Bookings appear in My
+Bookings for Session 1
+
+",,,,AI Generated,,09/11/2026 19:23:44,Ashley Cichy,09/11/2026 19:23:44,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424921,
+,,,,,,,,,,,,"Close the app or start a new session ~ Session 1 ends
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Relaunch the app and tap 'Continue as Guest' ~ A new guest session
+begins
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Navigate to My Bookings ~ My Bookings screen is empty; no bookings from
+Session 1 are visible
+
+",,,,,,,,,,,,
+TC-336,My Bookings is empty at session start before any booking is made,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,Medium,Functional,Not Automated,"Validates that the My Bookings screen shows no entries when the guest
+has not yet completed any booking in the current session.
+
+","Guest has just started a new session via 'Continue as Guest' and has not
+completed any booking.
+
+",Steps,"Navigate to the My Bookings screen ~ My Bookings screen is displayed
+
+",,,,AI Generated,,09/11/2026 19:23:43,Ashley Cichy,09/11/2026 19:23:43,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424915,
+,,,,,,,,,,,,"Verify no booking entries are shown ~ The list is empty; no bookings are
+displayed
+
+",,,,,,,,,,,,
+TC-335,My Bookings lists all session bookings most recent first,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that the My Bookings screen shows all bookings made in the
+current session, ordered most recent first.
+
+","Guest has completed at least two bookings in the current session.
+
+",Steps,"Navigate to the My Bookings screen ~ My Bookings screen is displayed
+
+",,,,AI Generated,,09/11/2026 19:23:43,Ashley Cichy,09/11/2026 19:23:43,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424907,
+,,,,,,,,,,,,"Verify all bookings made in the current session are listed ~ Every
+completed booking appears in the list
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the most recent booking appears first ~ Bookings are ordered with
+the latest booking at the top
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify each booking entry shows the event, its seats, total price, and
+confirmation number ~ All four fields are present on each booking entry
+
+",,,,,,,,,,,,
+TC-334,Booking Confirmation screen displays all required details,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that the Booking Confirmation screen shows a confirmation
+number, the event, each seat booked, and the final price paid.
+
+","Guest has just completed payment and the Booking Confirmation screen is
+displayed.
+
+",Steps,"View the Booking Confirmation screen ~ Screen is displayed immediately
+after payment
+
+",,,,AI Generated,,09/11/2026 19:23:42,Ashley Cichy,09/11/2026 19:23:42,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424902,
+,,,,,,,,,,,,"Verify a confirmation number is shown ~ A unique confirmation number is
+visible
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the event details are shown ~ Event name (and relevant details)
+is displayed
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify each booked seat is listed ~ All seats included in the booking
+are listed individually
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the final price paid is shown ~ The total amount paid (after any
+discount) is displayed
+
+",,,,,,,,,,,,
+TC-333,Confirming payment finalizes the booking and navigates to confirmation screen,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that tapping confirm on the Payment screen finalizes the
+booking and immediately shows the Booking Confirmation screen.
+
+","Guest is on the Payment screen with seats selected and order total
+displayed.
+
+",Steps,"Review the order summary on the Payment screen ~ All seats and totals
+are correct
+
+",,,,AI Generated,,09/11/2026 19:23:42,Ashley Cichy,09/11/2026 19:23:42,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424896,
+,,,,,,,,,,,,"Tap the confirm payment button ~ App navigates immediately to the
+Booking Confirmation screen
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the Booking Confirmation screen is displayed ~ Confirmation
+screen appears without delay or additional steps
+
+",,,,,,,,,,,,
+TC-332,Payment screen displays all selected seats and correct order totals,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that the Payment screen shows a review of every selected seat,
+the subtotal, any applied discount, and the final total.
+
+","Guest has selected seats, optionally applied a valid discount code, and
+has navigated to the Payment screen.
+
+",Steps,"View the Payment screen ~ All selected seats are listed individually
+
+",,,,AI Generated,,09/11/2026 19:23:41,Ashley Cichy,09/11/2026 19:23:41,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424891,
+,,,,,,,,,,,,"Verify the subtotal is displayed ~ Subtotal equals the sum of all
+selected seat base prices
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the discount line is shown if a code was applied ~ Discount
+amount is displayed; if no code was applied, no discount line appears
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the final total is displayed ~ Total = subtotal minus any
+discount
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Confirm no card details or payment form fields are present ~ No card
+number, expiry, or CVV fields are shown (payment is mocked)
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap the confirm payment button ~ Payment is processed and booking is
+finalized
+
+",,,,,,,,,,,,
+TC-331,Mixed-tier booking: discount code applies per seat based on eligibility,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that when a discount code is applied to a booking with both
+Standard and VIP seats, the discount is evaluated per seat — discounting
+only eligible seats.
+
+","Guest has selected 2 Standard seats and 2 VIP seats and is on the
+Discount Code step.
+
+",Steps,"Note the base price of each selected seat ~ Prices for 2 Standard and 2
+VIP seats are recorded
+
+",,,,AI Generated,,09/11/2026 19:23:41,Ashley Cichy,09/11/2026 19:23:41,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424884,
+,,,,,,,,,,,,"Enter 'SAVE10' in the discount code field ~ Code is accepted
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the discount is applied only to the 2 Standard seats ~ Each
+Standard seat price is reduced by 10%
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the 2 VIP seat prices are unchanged ~ VIP seat prices remain at
+base price
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the order total is correct ~ Total = (Standard1 × 0.9) +
+(Standard2 × 0.9) + VIP1 + VIP2
+
+",,,,,,,,,,,,
+TC-330,Invalid discount code shows inline error and does not block checkout,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that entering an unrecognized discount code shows an inline
+error message but does not prevent the guest from proceeding to payment.
+
+","Guest has selected seats and is on the Discount Code step.
+
+",Steps,"Enter an invalid/unrecognized code (e.g. 'BADCODE99') in the discount
+code field ~ An inline error message is displayed indicating the code is
+invalid
+
+",,,,AI Generated,,09/11/2026 19:23:40,Ashley Cichy,09/11/2026 19:23:40,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424879,
+,,,,,,,,,,,,"Verify the checkout flow is not blocked ~ The option to proceed to
+payment remains available
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap the button to proceed to payment without correcting the code ~ App
+navigates to the Payment screen at full price
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify no discount is applied to the order total ~ Order total equals
+the sum of all selected seat base prices
+
+",,,,,,,,,,,,
+TC-329,Discount code is optional — guest can proceed to payment without entering one,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that the discount code step is optional and the guest can
+proceed to payment without entering any code.
+
+","Guest has selected seats and is on the Discount Code step.
+
+",Steps,"Leave the discount code field empty ~ No code is entered
+
+",,,,AI Generated,,09/11/2026 19:23:40,Ashley Cichy,09/11/2026 19:23:40,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424872,
+,,,,,,,,,,,,"Tap the button to proceed to payment ~ App navigates to the Payment
+screen without requiring a discount code
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the order total reflects full prices with no discount applied ~
+Subtotal equals sum of all selected seat base prices; no discount line
+is shown
+
+",,,,,,,,,,,,
+TC-328,WELCOME15 becomes invalid after being used once,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that WELCOME15 can only be used successfully one time per
+session; after it has been applied to one booking it is no longer valid.
+
+","Guest has completed one booking (making WELCOME15 eligible) and has
+successfully used WELCOME15 on the second booking.
+
+",Steps,"Complete the second booking using WELCOME15 ~ Second booking is
+finalized with 15% discount
+
+",,,,AI Generated,,09/11/2026 19:23:39,Ashley Cichy,09/11/2026 19:23:39,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424864,
+,,,,,,,,,,,,"Start a third booking, select seats, and navigate to the Discount Code
+step ~ Discount code field is available
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Enter 'WELCOME15' ~ Code is rejected with an inline error; it is no
+longer valid after having been used once
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the guest can still proceed to payment without the discount ~
+Checkout continues at full price
+
+",,,,,,,,,,,,
+TC-327,WELCOME15 applies 15% discount from second booking onward,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that WELCOME15 gives 15% off any seat on the guest's second
+booking in a session, and is invalid on the first booking.
+
+","Guest has just started a new session and has completed exactly one
+booking.
+
+",Steps,"On the first booking's Discount Code step, enter 'WELCOME15' ~ Code is
+rejected with an inline error; it is not valid on the first booking
+
+",,,,AI Generated,,09/11/2026 19:23:39,Ashley Cichy,09/11/2026 19:23:39,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424854,
+,,,,,,,,,,,,"Complete the first booking without the discount ~ First booking is
+finalized
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Start a second booking, select seats, and navigate to the Discount Code
+step ~ Discount code field is available
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Enter 'WELCOME15' ~ Code is accepted
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify 15% discount is applied to all selected seats regardless of tier
+~ Both Standard and VIP seat prices are reduced by 15%
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Complete the second booking ~ Second booking is finalized with the
+WELCOME15 discount applied
+
+",,,,,,,,,,,,
+TC-326,FIRST20 is invalid even if not used on the first booking,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that FIRST20 becomes invalid after the first booking is
+completed, even if FIRST20 was NOT used on that first booking.
+
+","Guest has just started a new session. Guest completes their first
+booking WITHOUT using FIRST20.
+
+",Steps,"Select seats for the first booking and proceed to the Discount Code step
+~ Discount code field is shown
+
+",,,,AI Generated,,09/11/2026 19:23:39,Ashley Cichy,09/11/2026 19:23:39,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424845,
+,,,,,,,,,,,,"Skip the discount code and proceed to payment ~ First booking completes
+without any discount
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Start a second booking, select seats, and navigate to the Discount Code
+step ~ Discount code field is available
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Enter 'FIRST20' ~ Code is rejected with an inline error; discount is not
+applied
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the guest can still proceed to payment without the discount ~
+Checkout continues at full price
+
+",,,,,,,,,,,,
+TC-325,FIRST20 applies 20% discount on first booking only,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that FIRST20 gives 20% off any seat on the guest's first
+completed booking in a session, and is no longer valid on any subsequent
+booking.
+
+","Guest has just started a new session (no prior bookings). Guest has
+selected seats and is on the Discount Code step for their first booking.
+
+",Steps,"Enter 'FIRST20' in the discount code field on the first booking ~ Code
+is accepted
+
+",,,,AI Generated,,09/11/2026 19:23:38,Ashley Cichy,09/11/2026 19:23:38,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424836,
+,,,,,,,,,,,,"Verify 20% discount is applied to all selected seats regardless of tier
+~ Both Standard and VIP seat prices are reduced by 20%
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Complete the first booking (payment + confirmation) ~ First booking is
+finalized
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Start a second booking, select seats, and navigate to the Discount Code
+step ~ Discount code field is available
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Enter 'FIRST20' again ~ Code is rejected with an inline error; discount
+is not applied
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the guest can still proceed to payment without the discount ~
+Checkout continues at full price
+
+",,,,,,,,,,,,
+TC-324,SAVE10 is case-insensitive,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,Medium,Functional,Not Automated,"Validates that the SAVE10 discount code is matched case-insensitively
+(e.g. 'save10', 'Save10' all apply the discount).
+
+","Guest has selected at least one Standard seat and is on the Discount
+Code step.
+
+",Steps,"Enter 'save10' (all lowercase) in the discount code field ~ Code is
+accepted and 10% discount is applied to Standard seats
+
+",,,,AI Generated,,09/11/2026 19:23:38,Ashley Cichy,09/11/2026 19:23:38,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424827,
+,,,,,,,,,,,,"Proceed to payment and note the discounted total ~ Discounted total is
+correct
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Start a new booking, select a Standard seat, and enter 'Save10' (mixed
+case) ~ Code is accepted and 10% discount is applied
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the discount amount matches the all-lowercase entry ~ Discount is
+identical regardless of case
+
+",,,,,,,,,,,,
+TC-323,SAVE10 applies 10% discount to Standard seats only,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that the SAVE10 code reduces Standard seat prices by 10% and
+does not discount VIP seats in the same booking.
+
+","Guest has selected at least one Standard seat and at least one VIP seat
+on the Seat Selection screen and has proceeded to the Discount Code
+step.
+
+",Steps,"Note the base price of the selected Standard seat(s) and VIP seat(s) ~
+Base prices are recorded
+
+",,,,AI Generated,,09/11/2026 19:23:37,Ashley Cichy,09/11/2026 19:23:37,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424818,
+,,,,,,,,,,,,"Enter 'SAVE10' in the discount code field ~ Code is accepted
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the discount is applied to Standard seats ~ Standard seat price
+is reduced by 10% of its base price
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the VIP seat price is unchanged ~ VIP seat price remains at its
+original base price
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the order total reflects only the Standard seat discount ~ Total
+= (Standard price × 0.9) + VIP price
+
+",,,,,,,,,,,,
+TC-322,Booked seat no longer appears available to other guests,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that once a seat is booked, it is no longer shown as available
+to a different guest browsing the same event.
+
+","Two separate guest sessions are available. An event with available seats
+exists.
+
+",Steps,"Guest A navigates to the Seat Selection screen for an event and selects
+a seat ~ Seat is shown as selected for Guest A
+
+",,,,AI Generated,,09/11/2026 19:23:36,Ashley Cichy,09/11/2026 19:23:36,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424805,
+,,,,,,,,,,,,"Guest A completes the booking (proceeds through discount, payment,
+confirmation) ~ Booking is finalized; seat is now booked
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Guest B (new session) navigates to the same event's Seat Selection
+screen ~ Seat map loads for Guest B
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Guest B inspects the seat that Guest A booked ~ The seat is displayed as
+booked/unavailable; Guest B cannot select it
+
+",,,,,,,,,,,,
+TC-321,Already-booked seats are unavailable for selection,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that seats already booked by another guest appear as
+unavailable and cannot be selected by the current guest.
+
+","Guest is on the Seat Selection screen for an event where at least one
+seat has already been booked.
+
+",Steps,"View the seat map ~ At least one seat is displayed in a 'booked' visual
+state
+
+",,,,AI Generated,,09/11/2026 19:23:36,Ashley Cichy,09/11/2026 19:23:36,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424795,
+,,,,,,,,,,,,"Attempt to tap a booked seat ~ The seat cannot be selected; it remains
+in the booked state
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the booked seat does not appear in the guest's selection ~
+Selection count and list do not include the booked seat
+
+",,,,,,,,,,,,
+TC-320,VIP seats are priced higher than Standard seats for the same event,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that VIP-tier seats display a higher price than Standard-tier
+seats within the same event's seat selection screen.
+
+","Guest is on the Seat Selection screen for an event that has both
+Standard and VIP seats available.
+
+",Steps,"Identify a Standard-tier seat on the seat map and note its displayed
+price ~ Standard seat price is visible
+
+",,,,AI Generated,,09/11/2026 19:23:35,Ashley Cichy,09/11/2026 19:23:35,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424787,
+,,,,,,,,,,,,"Identify a VIP-tier seat on the seat map and note its displayed price ~
+VIP seat price is visible
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Compare the two prices ~ VIP seat price is higher than the Standard seat
+price for the same event
+
+",,,,,,,,,,,,
+TC-319,Guest can select up to 10 seats in a single booking,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that a guest can select a maximum of 10 seats and cannot
+select an 11th seat in a single booking.
+
+","Guest is on the Seat Selection screen for an event with at least 11
+available seats.
+
+",Steps,"Tap 10 different available seats one by one ~ Each seat changes to
+selected state; 10 seats are now selected
+
+",,,,AI Generated,,09/11/2026 19:23:35,Ashley Cichy,09/11/2026 19:23:35,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424778,
+,,,,,,,,,,,,"Attempt to tap an 11th available seat ~ The 11th seat cannot be
+selected; app prevents selection beyond 10 seats (e.g. shows a message
+or ignores the tap)
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify the selection count does not exceed 10 ~ Total selected seats
+shown is 10
+
+",,,,,,,,,,,,
+TC-318,Seat map groups seats by row with tier and availability indicators,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that the seat map on the Seat Selection screen groups seats by
+row, and each seat clearly shows its tier (Standard or VIP) and
+availability state.
+
+","Guest has navigated from Event Details to the Seat Selection screen for
+an event with both Standard and VIP seats available.
+
+",Steps,"View the seat map on the Seat Selection screen ~ Seats are grouped and
+displayed by row
+
+",,,,AI Generated,,09/11/2026 19:23:34,Ashley Cichy,09/11/2026 19:23:34,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424771,
+,,,,,,,,,,,,"Inspect individual seats ~ Each seat shows its tier (Standard or VIP)
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify available seats are visually distinguishable from already-booked
+seats ~ Available and booked seats have distinct visual states
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap an available seat ~ Seat changes to a 'selected' visual state,
+distinguishable from available and booked states
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap the same seat again to deselect ~ Seat returns to the available
+visual state
+
+",,,,,,,,,,,,
+TC-317,Event details screen shows full event information and seating breakdown,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that the Event Details screen displays full description,
+venue, date/time, and a breakdown of Standard vs VIP seats with
+remaining counts.
+
+","Guest is on the Event List screen. At least one event with available
+seats exists.
+
+",Steps,"Tap an available event from the catalog ~ Event Details screen opens
+
+",,,,AI Generated,,09/11/2026 19:23:34,Ashley Cichy,09/11/2026 19:23:34,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424763,
+,,,,,,,,,,,,"Verify the full event description is displayed ~ Full description text
+is visible
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify venue information is displayed ~ Venue name is shown
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify date and time are displayed ~ Event date and time are shown
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Verify seating breakdown is displayed ~ A breakdown showing number of
+Standard seats, number of VIP seats, and how many of each remain is
+visible
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap the proceed button to go to seat selection ~ App navigates to the
+Seat Selection screen
+
+",,,,,,,,,,,,
+TC-316,Sold-out events are marked and cannot be selected,57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,High,Functional,Not Automated,"Validates that events with no remaining seats are visually marked as
+sold out and tapping them does not navigate to event details or seat
+selection.
+
+","Guest is on the Event List screen. At least one event in the catalog has
+no remaining seats.
+
+",Steps,"Locate an event marked as sold out in the catalog ~ Event is visually
+distinguished with a 'Sold Out' indicator
+
+",,,,AI Generated,,09/11/2026 19:23:33,Ashley Cichy,09/11/2026 19:23:33,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424755,
+,,,,,,,,,,,,"Attempt to tap the sold-out event ~ App does not navigate to the event
+details screen; the event cannot be selected
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap an event that is not sold out ~ App navigates to the Event Details
+screen for that event
+
+",,,,,,,,,,,,
+TC-315,Each category has multiple events (filtering is meaningful),57194013,Ticket 1- Booking Flow Test Cases,Active,Ashley Cichy,Medium,Functional,Not Automated,"Validates that each category chip reveals more than one event, ensuring
+filtering is meaningful rather than cosmetic.
+
+","Guest is on the Event List screen. The catalog contains 30 events across
+5 categories.
+
+",Steps,"Tap the 'Music' category chip ~ Catalog filters to Music events; more
+than one Music event is displayed
+
+",,,,AI Generated,,09/11/2026 19:23:33,Ashley Cichy,09/11/2026 19:23:33,Ashley Cichy,Sept2026HackathonTickets,https://test-management.browserstack.com/projects/4123181/folder/57194013/test-cases/136424745,
+,,,,,,,,,,,,"Tap the 'Theater' category chip ~ More than one Theater event is
+displayed
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap the 'Comedy' category chip ~ More than one Comedy event is displayed
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap the 'Classical' category chip ~ More than one Classical event is
+displayed
+
+",,,,,,,,,,,,
+,,,,,,,,,,,,"Tap the 'Sports' category chip ~ More than one Sports event is displayed
+
+",,,,,,,,,,,,
