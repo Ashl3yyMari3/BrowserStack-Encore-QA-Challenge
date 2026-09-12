@@ -10,3 +10,8 @@ Finding, WCAG rule, recommended fix, severity, release call, scan link or CSV, a
 
 ## Portfolio status
 The accessibility evidence and final label are being consolidated before publication.
+
+## Final release label
+
+- **Severity:** Critical
+- **Call:** Fix it
