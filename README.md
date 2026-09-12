@@ -22,7 +22,7 @@ The challenge required Tickets 1–4 and offered Tickets 5–9 as optional advan
 | Ticket | Focus | Required? | Severity | Release call | Evidence status |
 | --- | --- | --- | --- | --- | --- |
 | [01](./tickets/ticket-01/README.md) | AI-assisted test design and PRD coverage | Yes | Critical | Block release | 136-case CSV published |
-| [02](./tickets/ticket-02/README.md) | SAVE10 business-rule automation | Yes | Critical | Block release | Code published |
+| [02](./tickets/ticket-02/README.md) | SAVE10 business-rule automation | Yes | Critical | Block release | Code and public run published |
 | [03](./tickets/ticket-03/README.md) | Cross-device event-date validation | Yes | Minor | Fix it | Session evidence being consolidated |
 | [04](./tickets/ticket-04/README.md) | VIP payment failure RCA | Yes | Blocker | Block release | RCA evidence being consolidated |
 | [05](./tickets/ticket-05/README.md) | Seat-selection accessibility | No | Critical | Fix it | Scan evidence being consolidated |
