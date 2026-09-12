@@ -19,17 +19,17 @@ The challenge required Tickets 1–4 and offered Tickets 5–9 as optional advan
 
 ## Ticket Index
 
-| Ticket | Focus | Required? | Evidence status |
-| --- | --- | --- | --- |
-| [01](./tickets/ticket-01/README.md) | AI-assisted test design and PRD coverage | Yes | Results being consolidated |
-| [02](./tickets/ticket-02/README.md) | SAVE10 business-rule automation | Yes | Code recovered and published |
-| [03](./tickets/ticket-03/README.md) | Cross-device event-date validation | Yes | Session evidence being consolidated |
-| [04](./tickets/ticket-04/README.md) | VIP payment failure RCA | Yes | RCA evidence being consolidated |
-| [05](./tickets/ticket-05/README.md) | Seat-selection accessibility | No | Scan evidence being consolidated |
-| [06](./tickets/ticket-06/README.md) | Exploratory 10-seat payment journey | No | Bug and activity-feed evidence published |
-| [07](./tickets/ticket-07/README.md) | Event-list locator RCA and fix | No | Corrected code published |
-| [08](./tickets/ticket-08/README.md) | Shared-venue seat availability | No | Bug evidence published |
-| [09](./tickets/ticket-09/README.md) | Tablet vs phone seats-remaining behavior | No | Session evidence being consolidated |
+| Ticket | Focus | Required? | Severity | Release call | Evidence status |
+| --- | --- | --- | --- | --- | --- |
+| [01](./tickets/ticket-01/README.md) | AI-assisted test design and PRD coverage | Yes | Critical | Block release | Results being consolidated |
+| [02](./tickets/ticket-02/README.md) | SAVE10 business-rule automation | Yes | Critical | Block release | Code published |
+| [03](./tickets/ticket-03/README.md) | Cross-device event-date validation | Yes | Minor | Fix it | Session evidence being consolidated |
+| [04](./tickets/ticket-04/README.md) | VIP payment failure RCA | Yes | Blocker | Block release | RCA evidence being consolidated |
+| [05](./tickets/ticket-05/README.md) | Seat-selection accessibility | No | Critical | Fix it | Scan evidence being consolidated |
+| [06](./tickets/ticket-06/README.md) | Exploratory 10-seat payment journey | No | Critical | Block release | Bug and activity-feed evidence published |
+| [07](./tickets/ticket-07/README.md) | Event-list locator RCA and fix | No | Major | Fix it | Corrected code published |
+| [08](./tickets/ticket-08/README.md) | Shared-venue seat availability | No | Critical | Block release | Bug evidence published |
+| [09](./tickets/ticket-09/README.md) | Tablet vs phone seats-remaining behavior | No | Critical | Block release | Session evidence being consolidated |
 
 ## Confirmed Findings
 
