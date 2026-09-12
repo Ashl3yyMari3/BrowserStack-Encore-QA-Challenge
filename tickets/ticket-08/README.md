@@ -13,7 +13,9 @@ Both checked events were hosted at **Laugh Lounge**. Seat C1 appeared with:
 even though that seat had never been booked for the second event. Seat inventory was incorrectly shared or leaked between separate events at the same venue.
 
 ## Evidence
-The Test Companion evidence dashboard confirms the unexpected booked state. The activity-feed image will be added after final file verification.
+- [Test Companion evidence dashboard](./evidence/shared-venue-seat-bug.png)
+
+The dashboard confirms the unexpected booked state and preserves the Test Companion finding.
 
 ## Final label
 The final challenge severity and release call are being copied from the submitted ticket record before publication.
