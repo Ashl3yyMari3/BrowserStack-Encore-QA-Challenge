@@ -16,3 +16,8 @@ A written finding, severity, release call, public BrowserStack links for each de
 
 ## Portfolio status
 The test scope is documented. Device results and public session links are being consolidated before publication.
+
+## Final release label
+
+- **Severity:** Minor
+- **Call:** Fix it
