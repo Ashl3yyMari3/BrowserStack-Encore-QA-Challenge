@@ -61,20 +61,20 @@ The event information itself remained correct, but the presentation format diffe
 Add the public BrowserStack session links for each device below:
 
 - **Samsung Galaxy M32 — Android 11:**  
-  [`Add public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/1?tab=tests&testListView=spec&details=4215917954&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
+  [`Public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/1?tab=tests&testListView=spec&details=4215917954&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
 
 - **Samsung Galaxy S24 — Android 14:**  
-  [`Add public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/2?tab=tests&testListView=spec&details=4215924718&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
+  [`Public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/2?tab=tests&testListView=spec&details=4215924718&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
 
 - **Samsung Galaxy Tab S8 — Android 12:**  
-  [`Add public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/3?tab=tests&testListView=spec&details=4215927451&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
+  [`Public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/3?tab=tests&testListView=spec&details=4215927451&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
 
 - **Google Pixel 6 — Android 12:**  
-  [`Add public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/4?tab=tests&testListView=spec&details=4215933368&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
+  [`Public session link`](https://automation.browserstack.com/projects/Encore+Hackathon/builds/event-date-display+cross-device/4?tab=tests&testListView=spec&details=4215933368&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
 
 ## Screenshot Evidence
 
 The comparison screenshot shows that the Galaxy S24 displays the event time in **12-hour format** while the other tested devices display it in **24-hour format**.
 
 ```md
-<img width="1672" height="941" alt="side by side comparison" src="https://github.com/user-attachments/assets/f6c7d286-294a-433e-bfd4-6ca628e1161c" />
+[`Screenshot Evidence`]<img width="1672" height="941" alt="side by side comparison" src="https://github.com/user-attachments/assets/f6c7d286-294a-433e-bfd4-6ca628e1161c" />
