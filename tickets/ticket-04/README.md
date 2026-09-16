@@ -62,7 +62,7 @@ The test is accurately detecting that the payment process never completes.
 
 ## RCA Evidence
 
-The Failure Analysis screenshot shows:
+The Failure Analysis Video/Screenshot shows:
 
 - **Root Cause:** App Bug
 - `payment-processing-indicator` still present after the timeout
