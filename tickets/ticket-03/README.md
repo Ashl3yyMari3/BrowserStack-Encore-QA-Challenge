@@ -77,4 +77,4 @@ Add the public BrowserStack session links for each device below:
 The comparison screenshot shows that the Galaxy S24 displays the event time in **12-hour format** while the other tested devices display it in **24-hour format**.
 
 ```md
-[`Screenshot Evidence`]<img width="1672" height="941" alt="side by side comparison" src="https://github.com/user-attachments/assets/f6c7d286-294a-433e-bfd4-6ca628e1161c" />
+<img width="1672" height="941" alt="side by side comparison" src="https://github.com/user-attachments/assets/f6c7d286-294a-433e-bfd4-6ca628e1161c" />
