@@ -78,7 +78,9 @@ This makes the automation resilient to list reordering.
 
 ### Failed BrowserStack Run
 
-[View the original failed BrowserStack run](https://automation.browserstack.com/builds/85ej90aaqeudhuydyc82phjtegsczhtqecm6xdtt)
+[View the original failed BrowserStack run Build](https://automation.browserstack.com/builds/85ej90aaqeudhuydyc82phjtegsczhtqecm6xdtt)
+
+[View the original failed BrowserStack run Video](https://automation.browserstack.com/projects/Encore+Hackathon/builds/Encore+Hackathon/7?tab=tests&testListView=spec&details=4216284043&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
 
 **Expected:** `Late Night Jazz`  
 **Received:** `City Derby Night`
@@ -97,8 +99,9 @@ This makes the automation resilient to list reordering.
 
 ### Passing BrowserStack Rerun
 
-[View the passing BrowserStack rerun](https://automation.browserstack.com/builds/drxk2lzr4jwryxdahsib8zptnvdmyym0mgolslib)
+[View the passing BrowserStack rerun Build](https://automation.browserstack.com/builds/drxk2lzr4jwryxdahsib8zptnvdmyym0mgolslib)
 
+[View the passing BrowserStack rerun Video](https://automation.browserstack.com/projects/Encore+Hackathon/builds/Encore+Hackathon/9?tab=tests&testListView=spec&details=4216373623&public_token=733f008a4e9962edc71af3f79d88502d273f91ca743f44e4f4f04de1ed640994)
 ---
 
 ## RCA Evidence
